@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.AsteroidTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-11-29T08:04:05" hostname="LAPTOP-9DT5TBIR" time="0.024">
+  <properties/>
+  <testcase name="checkRandPos1()" classname="org.example.AsteroidTest" time="0.017"/>
+  <testcase name="checkRandPos2()" classname="org.example.AsteroidTest" time="0.001"/>
+  <testcase name="checkTopAndLeftX()" classname="org.example.AsteroidTest" time="0.0"/>
+  <testcase name="checkTopAndLeftY()" classname="org.example.AsteroidTest" time="0.0"/>
+  <testcase name="checkPosX1()" classname="org.example.AsteroidTest" time="0.001"/>
+  <testcase name="checkPosX2()" classname="org.example.AsteroidTest" time="0.0"/>
+  <testcase name="checkPosY1()" classname="org.example.AsteroidTest" time="0.0"/>
+  <testcase name="checkPosY2()" classname="org.example.AsteroidTest" time="0.001"/>
+  <testcase name="checkUpdate1()" classname="org.example.AsteroidTest" time="0.0"/>
+  <testcase name="checkUpdate2()" classname="org.example.AsteroidTest" time="0.001"/>
+  <testcase name="checkNotTopAndLeftX()" classname="org.example.AsteroidTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
