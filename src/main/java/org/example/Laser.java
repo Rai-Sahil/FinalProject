@@ -21,7 +21,11 @@ public class Laser {
         bot = window.loadImage("C:\\Users\\raisa\\IdeaProjects\\JavaProject\\src\\main\\java\\org\\example\\kisspng-light-download-color-yellow-glare-light-effects-5a99f9b9a49f01.5350402715200403776743.png");
     }
 
-    void Update(Window window){
+  /** Updates the speed in which the direction of the laser is flying.
+   *
+   * @param window window for the user
+   */
+  void Update(Window window){
         posX += speed*window.cos(dir);
         posY += speed*window.sin(dir);
     }
@@ -36,7 +40,14 @@ public class Laser {
         window.pop();
     }
 
-    public boolean CheckCollision(Asteroid a, Window window){
+  /** Checks collision between an asteroid object and the laser,
+   *  Hit box is made larger to make it easier for laser impact.
+   *
+   * @param a asteroid object
+   * @param window window for the user
+   * @return true if the laser meets the hit box (center of the asteroid)
+   */
+  public boolean CheckCollision(Asteroid a, Window window){
         float d = window.dist(posX, posY, a.posX, a.posY);
 
         if(d < (a.size+size)*3/5){

@@ -48,7 +48,9 @@ public class Window extends PApplet {
     gameOver = loadImage("C:\\Users\\raisa\\IdeaProjects\\JavaProject\\src\\main\\java\\org\\example\\Game-Over-PNG-Image.png");
   }
 
-  //Used for setup of our game when we are running it.
+  /**
+   * Used for setup of our game when we run it.
+   */
   void InstantiateVariables(){
     player = new Player(this);
     asteroids = new ArrayList<Asteroid>();
@@ -120,6 +122,7 @@ public class Window extends PApplet {
         pop();
         break;
       }
+      // case 1, game state
       case 1 -> {
         RoundUpdate();
         Update();
@@ -151,6 +154,10 @@ public class Window extends PApplet {
     }
   }
 
+  /**
+   * Once the first round is about to finish, the window is repopulated with 5-8 asteroids
+   * into the window for round2.
+   */
   void RoundUpdate(){
     if(roundTitleCounter > 0)roundTitleCounter--;//If there is any timer subtract the timer
     else {
@@ -171,6 +178,9 @@ public class Window extends PApplet {
     }
   }
 
+  /**
+   * Render for objects asteroid, pixels, lasers, and round/score counter.
+   */
   public void Render() {
     background(0);
 
@@ -204,6 +214,14 @@ public class Window extends PApplet {
 
   }
 
+  /**
+   * Updates each object as needed.
+   * Player updates once a collision with asteroid takes place, updates gamestate to 2 (game over).
+   * Checks collision between an asteroid object and the laser,
+   * Hit box is made larger to make it easier for laser impact using the CheckCollision function in Laser class.
+   * Laser gets removed and so does the asteroid. Upon collision a pixel takes the place of the
+   * x and y position of where the asteroid was by getting the position of x and y.
+   */
   public void Update() {
     player.Update();
     for (Asteroid asteroid : asteroids) {
@@ -236,6 +254,8 @@ public class Window extends PApplet {
       }
     }
 
+    // The clear() method of List interface in Java is used to remove all the elements from the List container.
+    // This method does not delete the List container, instead it just removes all the elements from the List.
     //REMOVE
     for (int i = 0; i < laserRemove.size(); i++) {
       if (laserRemove.get(i) < lasers.size()) lasers.remove(laserRemove.get(i));

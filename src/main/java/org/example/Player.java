@@ -22,11 +22,13 @@ public class Player{
     shotFired = false;
   }
 
+  // Regular laser size rounds < 5
   public Laser Fire(Window window){
     Laser beam = new Laser(posX, posY, rotation, window);
     return beam;
   }
 
+  // Larger laser size for rounds > 5
   public Laser Fire2(Window window){
     Laser beam = new Laser(posX+30, posY+30, rotation, window);
     return beam;
@@ -51,6 +53,9 @@ public class Player{
     window.pop();
   }
 
+  /** Checks collision between an asteroid object and the laser,
+   *  Hit box is made larger to make it easier for laser impact.
+   */
   public boolean CheckCollision(Asteroid a, Window window){
     float d = window.dist(posX, posY, a.posX, a.posY);
 
