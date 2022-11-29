@@ -20,6 +20,10 @@ public class Star{
         this.colour = (255 / max_weight) * this.size;
     }
 
+  /**
+   * Displays the Star object on screen, setting its colour and size in pixels using strokeWeight
+   * @param window
+   */
     public void display(Window window){
         window.stroke(this.colour, this.colour, this.colour, this.colour);
         window.strokeWeight(this.size);
